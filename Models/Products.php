@@ -32,13 +32,23 @@ class Products{
     
 }
 
-//Impostare la sottocategoria per prodotti di Cani e Gatti;
+//Impostare la sottocategoria per prodotti di Cani;
 class DogProduct extends Products{
+   
+}
+
+//Impostare la sottoclasse per prodotti di Gatti;
+class CatProduct extends Products{
 
 }
 
+// Dogs
 $dogs = [
     new Products('biscotto', 'cibo', 10, 9, 'Il biscotto è molto buono', 'Models/img/biscotto.jpeg'),
     new Products('gioco', 'accessorio', 20, 8, 'Gioco resistente per cani', 'Models/img/gioco_cani.webp')
 ];
 
+$cats = [
+    new Products('lettiera', 'ogetti', 35, 7, 'la lettiera è scomoda', 'Models/img/lettiera.jpg'),
+    new Products('pallina', 'gioco', 5, 10, 'la pallina è morbida', 'Models/img/pallina.webp')
+];

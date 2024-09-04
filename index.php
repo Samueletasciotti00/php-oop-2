@@ -23,13 +23,26 @@ require_once __DIR__ . '/Models/Products.php';
 
     <!-- Lista elemento -->
     <ul>
-        <?php foreach ($dogs as $dog) {
-
-            // Otteniamo tutte le info del prodotto
-            $info = $dog->getInfo(); 
-        ?>
+        <?php foreach ($dogs as $dog) { $info = $dog->getInfo(); ?>
             <li>
                 <img src="<?php echo $dog->img; ?>" alt="<?php echo $info['name']; ?>" width="150px">
+                <p><strong>Nome:</strong> <?php echo $info['name']; ?></p>
+                <p><strong>Categoria:</strong> <?php echo $info['category']; ?></p>
+                <p><strong>Prezzo:</strong> <?php echo $info['price']; ?> €</p>
+                <p><strong>Voto:</strong> <?php echo $info['vote']; ?>/10</p>
+                <p><strong>Descrizione:</strong> <?php echo $info['description']; ?></p>
+            </li>
+        <?php } ?>
+    </ul>
+
+    <!-- Lista prodotti per Gatti -->
+    <h1>Lista dei prodotti per Gatti</h1>
+
+    <!-- Lista elemento -->
+    <ul>
+        <?php foreach ($cats as $cat) { $info = $cat->getInfo(); ?>
+            <li>
+                <img src="<?php echo $cat->img; ?>" alt="<?php echo $info['name']; ?>" width="150px">
                 <p><strong>Nome:</strong> <?php echo $info['name']; ?></p>
                 <p><strong>Categoria:</strong> <?php echo $info['category']; ?></p>
                 <p><strong>Prezzo:</strong> <?php echo $info['price']; ?> €</p>
