@@ -1,11 +1,5 @@
 <?php
 
-//Import di Products
-require_once __DIR__ . '/Categories.php';
-
-//Import di Type
-require_once __DIR__ . '/Products.php';
-
 //Impostare la classe per i prodotti generici
 class Products{
     public $name;
@@ -14,24 +8,37 @@ class Products{
     public $vote;
     public $description;
 
+    public $img;
     //Costruttore
-    public function __construct(string $_name, string $category, float $_price, float $_vote, string $_description){
+    public function __construct(string $_name, string $category, float $_price, float $_vote, string $_description, string $_img){
         $this->name = $_name;
         $this->category = $category;
         $this->price = $_price;
         $this->vote = $_vote;
         $this->description = $_description;
+        $this->img = $_img;
     }
 
     // Metodo per mostrare le informazioni del prodotto
     public function getInfo() {
-        echo "Name: $this->name, Category: $this->category, Price: $this->price, Vote: $this->vote, Description: $this->description";
+        return [
+            "name" => $this->name,
+            "category" => $this->category,
+            "price" => $this->price,
+            "vote" => $this->vote,
+            "description" => $this->description
+        ];
     }
     
 }
-$array1 = [
-    new Products('coseacaso','coseacaso','124','124','coseacaso')
+
+//Impostare la sottocategoria per prodotti di Cani e Gatti;
+class DogProduct extends Products{
+
+}
+
+$dogs = [
+    new Products('biscotto', 'cibo', 10, 9, 'Il biscotto è molto buono', 'Models/img/biscotto.jpeg'),
+    new Products('gioco', 'accessorio', 20, 8, 'Gioco resistente per cani', 'Models/img/gioco_cani.webp')
 ];
 
-var_dump($array1);
-var_dump($array1);
