@@ -44,10 +44,11 @@ class CatProduct extends Products{
 
 // Dogs
 $dogs = [
-    new Products('biscotto', 'cibo', 10, 9, 'Il biscotto è molto buono', 'Models/img/biscotto.jpeg'),
+    new Products(1, 'cibo', 10, 9, 'Il biscotto è molto buono', 'Models/img/biscotto.jpeg'),
     new Products('gioco', 'accessorio', 20, 8, 'Gioco resistente per cani', 'Models/img/gioco_cani.webp')
 ];
 
+// Cats
 $cats = [
     new Products('lettiera', 'ogetti', 35, 7, 'la lettiera è scomoda', 'Models/img/lettiera.jpg'),
     new Products('pallina', 'gioco', 5, 10, 'la pallina è morbida', 'Models/img/pallina.webp')
