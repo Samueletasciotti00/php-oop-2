@@ -2,6 +2,15 @@
 //Import di products
 require_once __DIR__ . '/Models/Products.php';
 
+
+//Test errori in output
+try {
+
+    // Voto del prodotto(Gatti);
+    echo $info['vote']; 
+} catch (Exception $e) {
+    echo "Errore: " . $e->getMessage();
+}
 ?>
 
 <!DOCTYPE html>
